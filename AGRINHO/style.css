@@ -1,0 +1,112 @@
+/* Definir margem e padding padrão para todo o conteúdo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilizar o menu de navegação */
+header {
+    background-color: #0e4e06; /* Cor de fundo do menu */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+    transition: color 0.3s, text-shadow 0.3s; /* Transições suaves */
+}
+
+.navbar i {
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+
+.navbar a:hover {
+    color: #139913; /* Cor do texto ao passar o mouse */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra do texto ao passar o mouse */
+}
+
+/* Estilizar o container do banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura do banner, ajuste conforme necessário */
+    background: url('https://www.comprerural.com/wp-content/uploads/2020/07/vacas-leiteiras-pastando-no-rio-grande-do-sul.jpeg') no-repeat center center;
+    background-size: cover; /* Faz com que a imagem cubra todo o container */
+    color: white; /* Cor do texto */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilizar o conteúdo do banner */
+.banner-content {
+    max-width: 600px; /* Limita a largura do conteúdo */
+}
+
+/* Estilizar o título e parágrafo do banner */
+.banner h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 2s ease-in-out forwards; /* Animação de fade-in */
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 10px;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 2s ease-in-out 1s forwards; /* Animação de fade-in com delay */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilizar o botão do banner */
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #0e4e06;; /* Cor de fundo do botão */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.cta-button:hover {
+    background-color: #234e06; /* Cor do botão ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+}
